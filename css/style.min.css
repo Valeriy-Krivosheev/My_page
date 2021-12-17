@@ -153,14 +153,22 @@ img {
   border: transparent;
   height: 50px;
   outline: transparent;
+  border-color: #F7971C;
+  -webkit-box-shadow: 0 0 40px 40px #F7971C inset, 0 0 0 0 #F7971C;
+          box-shadow: 0 0 40px 40px #F7971C inset, 0 0 0 0 #F7971C;
+  -webkit-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .button:hover,
 .button :focus {
-  border: 2px solid #F7971C;
-  background-color: transparent;
+  -webkit-box-shadow: 0 0 10px 0 #F7971C inset, 0 0 10px 4px #F7971C;
+          box-shadow: 0 0 10px 0 #F7971C inset, 0 0 10px 4px #F7971C;
+  background-color: #ffffff;
   color: #F7971C;
-  border-radius: 30%;
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .button:active {
@@ -213,221 +221,6 @@ img {
   .slick-arrow.slick-next {
     right: 16%;
   }
-}
-
-.slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: -49px;
-  position: absolute;
-  right: 25%;
-}
-
-.slick-dots button {
-  font-size: 0;
-  width: 100px;
-  background-color: #aeaeae;
-  height: 5px;
-  border: transparent;
-}
-
-@media (max-width: 1199px) {
-  .slick-dots button {
-    max-width: 80px;
-  }
-}
-
-@media (max-width: 991px) {
-  .slick-dots button {
-    max-width: 70px;
-  }
-}
-
-@media (max-width: 850px) {
-  .slick-dots button {
-    max-width: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slick-dots button {
-    max-width: 50px;
-  }
-}
-
-@media (max-width: 615px) {
-  .slick-dots button {
-    max-width: 40px;
-  }
-}
-
-.slick-dots .slick-active button {
-  background-color: #f7971c;
-}
-
-.popup__bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120vh;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-}
-
-.popup__bg.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #fff;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 50px 25px 25px;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 999;
-  border: 4px solid #F7971C;
-}
-
-@media (max-width: 480px) {
-  .popup {
-    left: 30%;
-  }
-}
-
-.popup.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-      -ms-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
-
-@media (max-width: 480px) {
-  .popup.active {
-    -webkit-transform: translate(-20%, -50%) scale(1);
-        -ms-transform: translate(-20%, -50%) scale(1);
-            transform: translate(-20%, -50%) scale(1);
-  }
-}
-
-.popup__button {
-  position: absolute;
-  top: 3px;
-  right: 2px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  cursor: pointer;
-  border: transparent;
-  background-image: url(../images/header/plus.svg);
-  height: 35px;
-  width: 35px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-}
-
-.popup__title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.popup__bg-about {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-}
-
-.popup__bg-about.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.popup-about {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #fff;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 50px 25px 25px;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-  z-index: 999;
-  border: 4px solid #F7971C;
-}
-
-@media (max-width: 480px) {
-  .popup-about {
-    left: 30%;
-  }
-}
-
-.popup-about.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-      -ms-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
-
-@media (max-width: 480px) {
-  .popup-about.active {
-    -webkit-transform: translate(-20%, -50%) scale(1);
-        -ms-transform: translate(-20%, -50%) scale(1);
-            transform: translate(-20%, -50%) scale(1);
-  }
-}
-
-.popup__button-about {
-  position: absolute;
-  top: 3px;
-  right: 2px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  cursor: pointer;
-  border: transparent;
-  background-image: url(../images/header/plus.svg);
-  height: 35px;
-  width: 35px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-}
-
-.popup__title-about {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 20px;
 }
 
 /* Slider */
@@ -1859,6 +1652,24 @@ body.compensate-for-scrollbar {
   max-width: 370px;
 }
 
+.tours__items:hover .tours__img {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.tours__item {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.tours__img {
+  display: block;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
 .tours__box {
   padding: 25px 15px 25px 15px;
   min-height: 380px;
@@ -2117,6 +1928,44 @@ body.compensate-for-scrollbar {
   -webkit-transform: scale(140%);
       -ms-transform: scale(140%);
           transform: scale(140%);
+}
+
+.kamchatka__title {
+  font-size: 50px;
+}
+
+.kamchatka__about {
+  margin-top: 0;
+}
+
+.kamchatka__text {
+  margin: 0 10px 8px 0;
+  max-width: 500px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.kamchatka__info {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.kamchatka__name {
+  margin-bottom: 15px;
+}
+
+.kamchatka__item {
+  font-size: 16px;
+}
+
+.kamchatka__slider {
+  max-width: 650px;
+}
+
+.kamchatka__img {
+  width: 500px;
+  height: 600px;
 }
 
 .header-page {
@@ -2473,7 +2322,7 @@ body.compensate-for-scrollbar {
     margin-right: 0;
   }
   .home {
-    padding: 0 0 80px 0;
+    padding: 40px 0 80px 0;
   }
   .home__inner {
     display: block;
@@ -2572,6 +2421,9 @@ body.compensate-for-scrollbar {
   .form {
     padding: 40px 0 60px;
   }
+  .form__media {
+    display: none;
+  }
   .form__title {
     margin-bottom: 25px;
     font-size: 32px;
@@ -2584,6 +2436,13 @@ body.compensate-for-scrollbar {
   .form__field {
     margin-bottom: 15px;
     min-width: 250px;
+  }
+  .form__info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .form__items {
+    width: 100%;
   }
   .footer__logo {
     margin-right: 10px;
@@ -2686,7 +2545,7 @@ body.compensate-for-scrollbar {
             transform: translateY(28%);
   }
   .home {
-    padding: 0 0 40px 0;
+    padding: 40px 0 40px 0;
   }
   .home__title {
     margin-bottom: 30px;
@@ -2735,16 +2594,6 @@ body.compensate-for-scrollbar {
     text-transform: none;
     font-weight: 600;
     max-width: 240px;
-  }
-  .form__items {
-    width: 100%;
-  }
-  .form__info {
-    margin-right: 0;
-    max-width: 100%;
-  }
-  .form__media {
-    display: none;
   }
   .header-page__title {
     font-size: 41px;
